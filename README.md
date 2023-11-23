@@ -1,7 +1,11 @@
 # go-prom-remote-write
+[![go.dev](https://pkg.go.dev/badge/github.com/b0ch3nski/go-prom-remote-write)](https://pkg.go.dev/github.com/b0ch3nski/go-prom-remote-write)
+[![goreportcard](https://goreportcard.com/badge/github.com/b0ch3nski/go-prom-remote-write)](https://goreportcard.com/report/github.com/b0ch3nski/go-prom-remote-write)
+[![sourcegraph](https://sourcegraph.com/github.com/b0ch3nski/go-prom-remote-write/-/badge.svg)](https://sourcegraph.com/github.com/b0ch3nski/go-prom-remote-write)
 
-Bare minimum Prometheus Remote-Write client, based on Proto files acquired from upstream [repository][repo].
-All dependencies were cut down with only `snappy` and `protobuf` remaining.
+Bare minimum Prometheus Remote-Write client, based on Proto files acquired from upstream [repository][repo]. \
+All dependencies were cut down with only `snappy` and `protobuf` remaining. \
+Data marshaling doesn't use reflection, thanks to the [vtprotobuf][vtproto] generation helper.
 
 For a code generation procedure, see included [Makefile](Makefile).
 
@@ -9,6 +13,7 @@ Simple client fulfills the Remote-Write [specification][spec] with couple small 
 timeouts and Basic authentication.
 
 [repo]: https://github.com/prometheus/prometheus/tree/main/prompb
+[vtproto]: https://github.com/planetscale/vtprotobuf
 [spec]: https://prometheus.io/docs/concepts/remote_write_spec
 
 ## install

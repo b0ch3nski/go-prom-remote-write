@@ -11,7 +11,6 @@ import (
 	"github.com/b0ch3nski/go-prom-remote-write/model"
 
 	"github.com/golang/snappy"
-	"google.golang.org/protobuf/proto"
 )
 
 type Client interface {
@@ -57,7 +56,9 @@ func (c *client) WithHttpClient(cl *http.Client) *client {
 // Write sends time series data to Prometheus using remote write mechanism.
 // See specification: https://prometheus.io/docs/concepts/remote_write_spec
 func (c *client) Write(ctx context.Context, series []*model.TimeSeries) error {
-	seriesProto, errMarshal := proto.Marshal(&model.WriteRequest{Timeseries: series})
+	wrq := &model.WriteRequest{Timeseries: series}
+
+	seriesProto, errMarshal := wrq.MarshalVT()
 	if errMarshal != nil {
 		return fmt.Errorf("failed marshaling remote write request: %w", errMarshal)
 	}

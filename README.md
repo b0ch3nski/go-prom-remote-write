@@ -1,6 +1,9 @@
 # go-prom-remote-write
+[![license](https://img.shields.io/github/license/b0ch3nski/go-prom-remote-write)](LICENSE)
+[![release](https://img.shields.io/github/v/release/b0ch3nski/go-prom-remote-write)](https://github.com/b0ch3nski/go-prom-remote-write/releases)
 [![go.dev](https://pkg.go.dev/badge/github.com/b0ch3nski/go-prom-remote-write)](https://pkg.go.dev/github.com/b0ch3nski/go-prom-remote-write)
 [![goreportcard](https://goreportcard.com/badge/github.com/b0ch3nski/go-prom-remote-write)](https://goreportcard.com/report/github.com/b0ch3nski/go-prom-remote-write)
+[![issues](https://img.shields.io/github/issues/b0ch3nski/go-prom-remote-write)](https://github.com/b0ch3nski/go-prom-remote-write/issues)
 [![sourcegraph](https://sourcegraph.com/github.com/b0ch3nski/go-prom-remote-write/-/badge.svg)](https://sourcegraph.com/github.com/b0ch3nski/go-prom-remote-write)
 
 Bare minimum Prometheus Remote-Write client, based on Proto files acquired from upstream [repository][repo]. \

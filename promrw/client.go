@@ -1,4 +1,4 @@
-package client
+package promrw
 
 import (
 	"bytes"
@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/b0ch3nski/go-prom-remote-write/model"
+	"github.com/b0ch3nski/go-prom-remote-write/promrw/model"
 
 	"github.com/golang/snappy"
 )

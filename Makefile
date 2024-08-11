@@ -2,7 +2,7 @@ REQ_GEN_DEPS := curl protoc protoc-gen-go protoc-gen-go-vtproto
 
 GEN_REPO := https://raw.githubusercontent.com/prometheus/prometheus/main/prompb
 GEN_PROTO := remote.proto types.proto
-GEN_MODEL_DIR := model
+GEN_MODEL_DIR := promrw/model
 
 .ONESHELL:
 .PHONY: generate

@@ -22,13 +22,16 @@ timeouts and Basic authentication.
 ## install
 
 ```
-go get github.com/b0ch3nski/go-prom-remote-write
+go get github.com/b0ch3nski/go-prom-remote-write@latest
 ```
 
 ## example
 
 ```go
-promClient := client.
+import "github.com/b0ch3nski/go-prom-remote-write/promrw"
+import "github.com/b0ch3nski/go-prom-remote-write/promrw/model"
+
+promClient := promrw.
 	NewClient("http://localhost:9090/api/v1/write").
 	WithAuthBasic("username", "password").
 	WithTimeout(3 * time.Second).
@@ -51,7 +54,5 @@ series := []*model.TimeSeries{
 	},
 }
 
-if err := promClient.Write(context.Background(), series); err != nil {
-	panic(err)
-}
+promClient.Write(context.Background(), series)
 ```
